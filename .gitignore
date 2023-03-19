@@ -1,0 +1,27 @@
+# Compiled Python files
+*.pyc
+
+# Virtual environment
+venv/
+
+# Local development settings
+*.env
+
+# Django migration files
+*/migrations/*.py
+*/migrations/*.pyc
+*/migrations/__pycache__/
+
+# Secret keys and configuration
+*.key
+*.pem
+*.env
+
+# Log files
+*.log
+
+# Other generated files
+__pycache__/
+*.py[cod]
+*.so
+*.egg-info/

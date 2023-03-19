@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h1>All Books</h1>
+  <ul>
+    {% for book in books %}
+      <li><a href="{% url 'book_detail' book.id %}">{{ book.title }}</a> by {{ book.author.all|join:', ' }} (Published by {{ book.publisher }} on {{ book.publication_date|date:'F j, Y' }})</li>
+    {% endfor %}
+  </ul>
+{% endblock %}

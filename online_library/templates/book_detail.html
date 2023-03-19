@@ -1,0 +1,7 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h1>{{ book.title }}</h1>
+  <p>By {{ book.author.all|join:', ' }} (Published by {{ book.publisher }} on {{ book.publication_date|date:'F j, Y' }})</p>
+  <a href="{% url 'book_edit' book.id %}">Edit Book Info</a>
+{% endblock %}
